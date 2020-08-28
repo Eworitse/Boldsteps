@@ -1,23 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import NumberGrid from './NumberGrid';
 
-const Wrapper = styled.div`
-width: ${props => props.width};
-height: ${props => props.height};
-background-color: ${props => props.bgcolor};
-box-sizing: border-box;
-border-style: solid;
-border-width: 5px;
-border-color: white;
-border-radius: 20px;
-box-shadow:
-display: flex;
-justify-content: center;
+const ContentWrap = styled.div`
+position: relative;
+height: 68%;
+width: 95%;
 `;
 
-function ContentWrapper(props){
+const Wrapper = styled.div`
+position: relative;
+display: flex;
+justify-content: center;
+align-item: center;
+box-shadow: 2px 2px 24px 5px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+max-width: 90%;
+padding-top: 2%;
+padding-bottom: 2%;
+margin: 1.5%;
+`;
+
+function ContentWrapper() {
     return(
-        <Wrapper width={props.width} height={props.height} bgcolor={props.bkg} />
+            <ContentWrap>
+                <Wrapper>
+                    <NumberGrid />
+                </Wrapper>
+            </ContentWrap>
     );
 }
 
