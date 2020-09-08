@@ -22,7 +22,7 @@ function QuizContextProvider(props) {
     let correctValue = "";
     
     function addNum(){
-        if (cardProps[0].numRange.length < 5) {
+        if (cardProps[0].numRange.length < 20) {
             const oldRange = cardProps[0].numRange;
             const range = [...oldRange];
             
