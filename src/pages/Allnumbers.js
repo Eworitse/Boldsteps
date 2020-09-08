@@ -7,6 +7,7 @@ import MainContent from '../comps/MainContent';
 import ContentWrapper from '../comps/ContentWrapper';
 import Control from '../comps/Control';
 import NumRangeContextProvider from '../comps/RangeContext';
+import NumberGrid from '../comps/NumberGrid';
 
 
 function Allnumbers() {
@@ -20,7 +21,9 @@ function Allnumbers() {
                 <MainContent bkg={bodyColour}>
                     <NumRangeContextProvider>
                         <Control bkg={darkColor} />
-                        <ContentWrapper />
+                        <ContentWrapper>
+                            <NumberGrid />
+                        </ContentWrapper>
                     </NumRangeContextProvider>
                 </MainContent>
                 <Footer bkg={darkColor} />

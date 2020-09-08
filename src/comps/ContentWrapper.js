@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import NumberGrid from './NumberGrid';
 
 const ContentWrap = styled.div`
 position: relative;
 height: 68%;
 width: 95%;
+margin-left: auto;
+margin-right: auto;
 `;
 
 const Wrapper = styled.div`
@@ -18,14 +19,14 @@ border-radius: 20px;
 max-width: 90%;
 padding-top: 2%;
 padding-bottom: 2%;
-margin: 1.5%;
+margin: 1.5% auto 1.5% auto;
 `;
 
-function ContentWrapper() {
+function ContentWrapper(props) {
     return(
             <ContentWrap>
                 <Wrapper>
-                    <NumberGrid />
+                    {props.children}
                 </Wrapper>
             </ContentWrap>
     );

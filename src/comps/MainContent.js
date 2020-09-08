@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Container from 'react-bootstrap/Container';
+import { QuizContext } from './QuizContext';
 
 const Wrapper = styled(Container)`
 position: relative;
@@ -18,6 +19,7 @@ align-items: center;
 `;
 
 function MainContent(props){
+
     return(
         <Wrapper bgcolor={props.bkg}>
             {props.children}

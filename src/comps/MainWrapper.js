@@ -9,6 +9,8 @@ height: 100vh;
 background-color: ${props => props.bkg || "white"};
 justify-content: center;
 align-item: center;
+margin-left: auto;
+margin-right: auto;
 `;
 
 function MainWrapper(props){

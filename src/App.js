@@ -7,7 +7,6 @@ import Allnumbers from './pages/Allnumbers';
 import SingleNumber from './pages/Singlenumber';
 import Quiz from './pages/Quiz';
 
-
 function App() {
   return (
     <Router>

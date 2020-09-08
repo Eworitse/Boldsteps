@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { animated, useSpring} from 'react-spring';
-import { NumRangeContext } from './RangeContext';
+import { QuizContext } from './QuizContext';
 
 const ControlWrap = styled.div`
 position: relative;
@@ -13,7 +13,7 @@ flex-wrap: nowrap;
 align-items: center;
 
 @media screen and (max-height: 400px){
-    height: 20%;
+    width: 90%;
 }
 `;
 
@@ -95,11 +95,11 @@ top: 25%;
 }
 `;
 
-function Control(props) {
+function ControlQuiz(props) {
     const bodyColour = "#E9CB9F";
     const navColor = "#BA9F78";
 
-    const { numRange, addNum, removeNum} = useContext(NumRangeContext);
+    const { cardProps, addNum, removeNum } = useContext(QuizContext);
 
     const [insideDecrease, setInsideDecrease] = useState(false);
     const [insideIncrease, setInsideIncrease] = useState(false);
@@ -119,7 +119,7 @@ function Control(props) {
         setInsideIncrease(!insideIncrease);
         addNum();
     }
-        
+
     return(
         <>
             <ControlWrap>
@@ -127,8 +127,8 @@ function Control(props) {
                 onClick={changeColorDButton} onMouseLeave={() => setInsideDecrease(false)}> - </DecreaseButton>
                 
                 <Progressbar bgcolor={props.bkg}>
-                    <ProgressbarLength bgcolor={props.bkg} width={numRange.length*5}></ProgressbarLength>
-                    <CurrentProgess>{ numRange.length}</CurrentProgess>
+                    <ProgressbarLength bgcolor={props.bkg} width={cardProps[0].numRange.length*5}></ProgressbarLength>
+                    <CurrentProgess>{ cardProps[0].numRange.length}</CurrentProgess>
                 </Progressbar>
 
                 <IncreaseButton bgcolor={props.bkg} style={bgIncreaseProps}
@@ -138,4 +138,4 @@ function Control(props) {
     );
 }
 
-export default Control;
+export default ControlQuiz;

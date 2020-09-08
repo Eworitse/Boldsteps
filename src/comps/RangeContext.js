@@ -9,7 +9,7 @@ function NumRangeContextProvider(props){
 
     function addNum(){
 
-        if (numRange.length < 20) {
+        if (numRange.length < 5) {
             let newArr = [...numRange];
             newArr.push(newArr.length+1);
             setNumRange(newArr);

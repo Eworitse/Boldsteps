@@ -1,40 +1,35 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import styled from 'styled-components';
 import '../App.css';
 import Navibar from '../comps/Header';
 import Footer from '../comps/Footer';
+import MainWrapper from '../comps/MainWrapper';
+import MainContent from '../comps/MainContent';
+import ContentWrapper from '../comps/ContentWrapper';
+import Control from '../comps/Control';
+import NumRangeContextProvider from '../comps/RangeContext';
 
-const MainContent = styled(Container)`
-background-color: #FFCA7A;
-flex-grow: 1;
-margin-bottom: 60px;
 
-@media screen and (max-height: 400px){
-    margin-bottom: 40px;
-}
-`;
-
-const MainWrapper = styled.div`
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-background-color: ${props => props.bkg || "white"};
-align-items: stretch;
-`;
-
-function SingleNumber() {
+function Allnumbers() {
     const bodyColour = "#FFCA7A";
+    const navColor = "#C29146";
+    const footerColor = "#9A6F2E";
 
     return(
         <>
             <MainWrapper bkg={bodyColour}>
-                <Navibar bkg="#C29146" />
-                <MainContent><h1>Singleeee!</h1></MainContent>
-                <Footer bkg="#9A6F2E"/>
+                <Navibar bkg={navColor} />
+                <MainContent bkg={bodyColour}>
+                    <NumRangeContextProvider>
+                        <Control bkg={footerColor} />
+                        <ContentWrapper>
+                           <h1>Singleee!!!</h1>
+                        </ContentWrapper>
+                    </NumRangeContextProvider>
+                </MainContent>
+                <Footer bkg={footerColor} />
             </MainWrapper>
         </>
     );
 }
 
-export default SingleNumber;
+export default Allnumbers;
