@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import '../App';
 import Navibar from '../comps/Header';
@@ -14,18 +13,22 @@ display: flex;
 flex-direction: column;
 height: 100vh;
 background-color: ${props => props.bkg || "white"};
-justify-content: center;
-align-item: center;
+width: 100vw;
+
+@media (max-width: 547px){
+    height: auto;
+}
 `;
 
-const MainContent = styled(Container)`
+const MainContent = styled.div`
 position: relative;
 display: flex;
 background-color: #6CCFCF;
 flex-grow: 1;
 margin-bottom: 60px;
 justify-content: center;
-align-item: center;
+align-items: center;
+width: 100%;
 
 @media screen and (max-height: 400px){
     margin-bottom: 40px;
@@ -36,16 +39,22 @@ const ContentWrapper = styled.div`
 position: relative;
 display: flex;
 justify-content: center;
-align-item: center;
-box-shadow: 2px 2px 24px 5px rgba(0, 0, 0, 0.25);
+align-items: center;
+box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.25);
 border-radius: 20px;
 width: 95%;
 height: 80%;
-padding-top: 2%;
-padding-bottom: 2%;
-margin: 1.5%;
-`;
 
+@media (max-width: 1000px){
+width: 98%;
+}
+
+@media (max-width: 547px){
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+`;
 
 const CardLabel = styled.div`
 width: 100%;
@@ -59,14 +68,18 @@ text-align: center;
 const MyCard = styled.div`
 position: relative;
 box-sizing: border-box;
-margin-left: 20px;
 width: 25%;
 display: flex;
 border-width: 7px;
 border-style: solid;
 border-color: white;
 border-radius: 15px;
-box-shadow: 2px 2px 24px 5px rgba(0, 0, 0, 0.25);
+box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.25);
+margin: 10px;
+
+@media (max-width: 547px){
+    width: 60%;
+}
 `;
 
 const MyImage = styled.img`

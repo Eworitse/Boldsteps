@@ -10,6 +10,7 @@ import NumRangeContextProvider from '../comps/RangeContext';
 import NumberGrid from '../comps/NumberGrid';
 
 
+
 function Allnumbers() {
     const bodyColour = "#E9CB9F";
     const darkColor = "#8C7758";

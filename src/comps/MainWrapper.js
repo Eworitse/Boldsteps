@@ -7,10 +7,7 @@ display: flex;
 flex-direction: column;
 height: 100vh;
 background-color: ${props => props.bkg || "white"};
-justify-content: center;
-align-item: center;
-margin-left: auto;
-margin-right: auto;
+width: 100vw;
 `;
 
 function MainWrapper(props){

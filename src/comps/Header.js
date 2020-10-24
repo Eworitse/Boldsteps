@@ -11,11 +11,11 @@ const MyContainer = styled(Container)`
 display: flex;
 `; 
 
+const MyNavbar = styled(Navbar)`
+background-color: ${props => props.bgcolor || "white"};
+`;
 
 function Navibar(props) {
-    const MyNavbar = styled(Navbar)`
-    background-color: ${props => props.bgcolor || "white"};
-    `;
 
     return(
         <MyNavbar sticky="top" collapseOnSelect bgcolor={props.bkg} expand="md">

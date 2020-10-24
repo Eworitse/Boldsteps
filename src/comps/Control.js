@@ -12,8 +12,9 @@ display: flex;
 flex-wrap: nowrap;
 align-items: center;
 
-@media screen and (max-height: 400px){
-    height: 20%;
+@media screen and (max-height: 547px){
+    height: 15%;
+    padding: 2px;
 }
 `;
 

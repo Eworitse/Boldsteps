@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { animated, useSpring } from 'react-spring';
 import { useSpeechSynthesis } from 'react-speech-kit';

@@ -10,7 +10,7 @@ background-color: ${props => props.bgcolor || "white"};
 flex-grow: 1;
 margin-bottom: 60px;
 flex-direction: column;
-justify-content: center;
+//justify-content: center;
 align-items: center;
 
 @media screen and (max-height: 400px){
