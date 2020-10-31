@@ -69,6 +69,7 @@ const MyCard = styled.div`
 position: relative;
 box-sizing: border-box;
 width: 25%;
+max-width: 251px;
 display: flex;
 border-width: 7px;
 border-style: solid;
