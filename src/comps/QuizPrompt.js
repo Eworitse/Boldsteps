@@ -27,15 +27,11 @@ function Prompt() {
     const correctNum = cardProps[3].correctVal;
     const promptText = `Touch number ${correctNum}`;
 
-    console.log("Rendering...");
-    console.log(promptText);
-
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(promptText); 
     
     synth.speak(utterance);
     
-
     return(
         <>
             <PromptBox onClick={() => synth.speak(utterance)}>

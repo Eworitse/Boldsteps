@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react';
 
-
 export const NumRangeContext = createContext();
 
 function NumRangeContextProvider(props){

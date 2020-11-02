@@ -6,11 +6,9 @@ import Dashboard from './pages/Dashboard';
 import Allnumbers from './pages/Allnumbers';
 import SingleNumber from './pages/Singlenumber';
 import Quiz from './pages/Quiz';
-import NumRangeContextProvider from './comps/RangeContext';
 
 function App() {
   return (
-    <NumRangeContextProvider>
     <Router>
       <Switch>
         <Route path="/allnumbers"><Allnumbers /></Route>
@@ -19,7 +17,6 @@ function App() {
         <Route exact path="/"><Dashboard /></Route>
       </Switch>
     </Router>
-    </NumRangeContextProvider>
   );
 }
 
