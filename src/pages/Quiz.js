@@ -15,7 +15,6 @@ function Quiz() {
     const navColor = "#9684CA";
     const footerColor = "#6F6390";
 
-
     return(
         <>
             <MainWrapper bkg={bodyColour}>

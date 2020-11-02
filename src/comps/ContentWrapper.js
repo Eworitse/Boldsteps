@@ -15,7 +15,7 @@ position: relative;
 display: flex;
 justify-content: center;
 align-items: center;
-box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.25);
+box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
 border-radius: 20px;
 width: 90%;
 padding-top: 2%;
