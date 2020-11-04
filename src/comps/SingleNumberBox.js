@@ -160,7 +160,7 @@ function SingleNumberBox(props) {
         }
 
         console.log("from useLayoutEffect");
-    });
+    }, [val, nextVisibility, numRange]);
 
     return(
         <Wrapper>
