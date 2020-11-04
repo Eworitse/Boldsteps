@@ -14,7 +14,6 @@ border-radius: 20px;
 width: 90%;
 max-width: 700px;
 margin: 1.5% auto 1.5% auto;
-
 @media (max-width: 547px){
     width: 100%;
     margin-left: 2px;
@@ -36,7 +35,6 @@ justify-content: center;
 align-items: center;
 cursor: ${props => props.enable ? "pointer" : "default"};
 opacity: ${props => props.enable ? "1" : "0.3"};
-
 &:hover{
     background-color: ${props => props.enable ? "#FFDA9A" : "none"};
     border-color: ${props => props.enable ? "white" : "#D2B166"};
@@ -56,7 +54,6 @@ justify-content: center;
 align-items: center;
 cursor: ${props => props.enable ? "pointer" : "default"};
 opacity: ${props => props.enable ? "1" : "0.3"};
-
 &:hover{
     background-color: ${props => props.enable ? "#FFDA9A" : "none"};
     border-color: ${props => props.enable ? "white" : "#D2B166"};
@@ -97,6 +94,7 @@ function NumberSquare(props) {
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(props.asText);
 
+    synth.speak(utterance);
 
     console.log("from Square after speech");
 
